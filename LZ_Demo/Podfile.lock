@@ -1,0 +1,46 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CYLTabBarController (1.5.4)
+  - Masonry (1.0.1)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.9)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - UITableView+FDTemplateLayoutCell (1.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - CYLTabBarController
+  - Masonry (~> 1.0.1)
+  - MBProgressHUD (~> 0.9.2)
+  - MJRefresh
+  - SDWebImage (~> 3.8.1)
+  - UITableView+FDTemplateLayoutCell (~> 1.4)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CYLTabBarController: 7c2985a03fa6bde1d5a38d32e021f31ae46fff7c
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+
+PODFILE CHECKSUM: 83f8fe8efa396e2d87c497e87465fa5739dd768a
+
+COCOAPODS: 1.0.1
