@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FDE1D54214400A3A3CB /* FirstTableViewCell.m */; };
+		040E9FE11D54214400A3A3CB /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */; };
+		040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FE31D54360300A3A3CB /* FirstModel.m */; };
 		043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 043906821D52D5C9004E942F /* LZNetworkSingleton.m */; };
+		04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */; };
+		04E1CFC91D547BB700D50AD8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1CFC81D547BB700D50AD8 /* Icon.png */; };
 		04E230281D51C2A7005BD2FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230271D51C2A7005BD2FB /* main.m */; };
 		04E230331D51C2A7005BD2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E230321D51C2A7005BD2FB /* Assets.xcassets */; };
 		04E230541D51E35E005BD2FB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230531D51E35E005BD2FB /* FirstViewController.m */; };
@@ -24,8 +29,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040E9FDD1D54214400A3A3CB /* FirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
+		040E9FDE1D54214400A3A3CB /* FirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
+		040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		040E9FE21D54360300A3A3CB /* FirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModel.h; sourceTree = "<group>"; };
+		040E9FE31D54360300A3A3CB /* FirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModel.m; sourceTree = "<group>"; };
 		043906811D52D5C9004E942F /* LZNetworkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNetworkSingleton.h; sourceTree = "<group>"; };
 		043906821D52D5C9004E942F /* LZNetworkSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNetworkSingleton.m; sourceTree = "<group>"; };
+		04E1CFC41D5479AA00D50AD8 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
+		04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
+		04E1CFC81D547BB700D50AD8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		04E230231D51C2A7005BD2FB /* LZ_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZ_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E230271D51C2A7005BD2FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04E230321D51C2A7005BD2FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LZ_Demo/Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E1CFC71D547BB700D50AD8 /* WEBICON */ = {
+			isa = PBXGroup;
+			children = (
+				04E1CFC81D547BB700D50AD8 /* Icon.png */,
+			);
+			path = WEBICON;
+			sourceTree = "<group>";
+		};
 		04E2301A1D51C2A7005BD2FB = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +165,8 @@
 			children = (
 				04E230521D51E35E005BD2FB /* FirstViewController.h */,
 				04E230531D51E35E005BD2FB /* FirstViewController.m */,
+				04E1CFC41D5479AA00D50AD8 /* FirstDetailViewController.h */,
+				04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */,
 			);
 			path = FirstedViewController;
 			sourceTree = "<group>";
@@ -196,6 +219,8 @@
 		04E230461D51E094005BD2FB /* FirstedModel */ = {
 			isa = PBXGroup;
 			children = (
+				040E9FE21D54360300A3A3CB /* FirstModel.h */,
+				040E9FE31D54360300A3A3CB /* FirstModel.m */,
 			);
 			path = FirstedModel;
 			sourceTree = "<group>";
@@ -224,6 +249,7 @@
 		04E2304A1D51E094005BD2FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04E1CFC71D547BB700D50AD8 /* WEBICON */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -253,6 +279,9 @@
 		04E2304D1D51E094005BD2FB /* FirstedView */ = {
 			isa = PBXGroup;
 			children = (
+				040E9FDD1D54214400A3A3CB /* FirstTableViewCell.h */,
+				040E9FDE1D54214400A3A3CB /* FirstTableViewCell.m */,
+				040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */,
 			);
 			path = FirstedView;
 			sourceTree = "<group>";
@@ -365,6 +394,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1CFC91D547BB700D50AD8 /* Icon.png in Resources */,
+				040E9FE11D54214400A3A3CB /* FirstTableViewCell.xib in Resources */,
 				04E230621D51E639005BD2FB /* Main.storyboard in Resources */,
 				04E230331D51C2A7005BD2FB /* Assets.xcassets in Resources */,
 				04E230741D51F0C3005BD2FB /* Image.xcassets in Resources */,
@@ -429,11 +460,14 @@
 			files = (
 				04E2306C1D51E6D7005BD2FB /* FourthViewController.m in Sources */,
 				043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */,
+				040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */,
 				04E230661D51E6A2005BD2FB /* SecondViewController.m in Sources */,
+				04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */,
 				04E2306F1D51E716005BD2FB /* AppDelegate.m in Sources */,
 				04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */,
 				04E230691D51E6B8005BD2FB /* ThirdViewController.m in Sources */,
 				04E230541D51E35E005BD2FB /* FirstViewController.m in Sources */,
+				040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */,
 				04E230281D51C2A7005BD2FB /* main.m in Sources */,
 				04E2307A1D51F79F005BD2FB /* LZPlusButtonSubclass.m in Sources */,
 			);
@@ -530,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZYZX.LZ-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZYZX.LZ-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
