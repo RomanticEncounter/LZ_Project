@@ -9,6 +9,14 @@
 #import "FirstDetailViewController.h"
 #import "LZNetworkSingleton.h"
 @interface FirstDetailViewController ()<UIWebViewDelegate>
+/**
+ *  面板
+ */
+@property (nonatomic, strong) UIView *panelView;
+/**
+ *  加载视图
+ */
+@property (nonatomic, strong) UIActivityIndicatorView *loadingView;
 
 @end
 
@@ -17,11 +25,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *image = [UIImage imageNamed:@"Icon"];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, self.navigationController.navigationBar.bounds.size.height)];
-    imageView.image = image ;
-    imageView.contentMode = UIViewContentModeScaleAspectFit ;//设置
-    self.navigationItem.titleView = imageView;
+    //加载等待视图
+    self.panelView = [[UIView alloc] initWithFrame:self.view.bounds];
+    self.panelView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.panelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+    
+    self.loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.loadingView.frame = CGRectMake((self.view.frame.size.width - self.loadingView.frame.size.width) / 2, (self.view.frame.size.height - self.loadingView.frame.size.height) / 2, self.loadingView.frame.size.width, self.loadingView.frame.size.height);
+    self.loadingView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.panelView addSubview:self.loadingView];
+
+   
     
     UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH,  self.view.frame.size.height)];
     webView.delegate = self;
@@ -33,8 +47,6 @@
     webView.scalesPageToFit = NO;  //禁止用户缩放页面
     
     webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber|UIDataDetectorTypeLink;
-    
-//    webView.scrollView.pagingEnabled = YES;
     
     webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0,0, 0);
     
@@ -50,7 +62,6 @@
     [webView loadRequest:request];
 
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

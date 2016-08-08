@@ -14,29 +14,23 @@
 #import "FirstModel.h"
 #import "FirstDetailViewController.h"
 #import "UITableView+FDTemplateLayoutCell.h"
+#import "MJRefresh.h"
 @interface FirstViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *myTableView ;
     NSMutableArray *dataSourceArray ;
+    NSInteger downFresh ;
 }
 
 @end
 
 @implementation FirstViewController
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    UIImage *image = [UIImage imageNamed:@"Icon"];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, self.navigationController.navigationBar.bounds.size.height)];
-    imageView.image = image ;
-    imageView.contentMode = UIViewContentModeScaleAspectFit ;//设置
-    self.navigationItem.titleView = imageView;
-
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"首页";
-    
+    /**
+     *  导航栏上的图片
+     */
     UIImage *image = [UIImage imageNamed:@"Icon"];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, self.navigationController.navigationBar.bounds.size.height)];
     imageView.image = image ;
@@ -47,10 +41,23 @@
     
     dataSourceArray = [NSMutableArray arrayWithCapacity:0];
     
+    downFresh = 1 ;
+    
     myTableView = [[UITableView alloc]initWithFrame:CGRectZero];
     myTableView.dataSource = self ;
     myTableView.delegate = self ;
     [self.view addSubview:myTableView];
+    myTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [dataSourceArray removeAllObjects];
+        downFresh = 1 ;
+        [self HttpRequest];
+        [myTableView.mj_header endRefreshing];
+    }];
+    myTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        downFresh = downFresh + 1 ;
+        [self HttpRequest];
+        [myTableView.mj_footer endRefreshing];
+    }];
     
     [myTableView mas_makeConstraints:^(MASConstraintMaker *make)
      {
@@ -96,6 +103,7 @@
     FirstDetailViewController * detailVC = [[FirstDetailViewController alloc]init];
     FirstModel *model = dataSourceArray[indexPath.row];
     detailVC.URL = model.pushURL ;
+    detailVC.title = model.title ;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 /**
@@ -103,7 +111,8 @@
  */
 - (void)HttpRequest
 {
-    [LZNetworkSingleton AddValueWithGET:@"http://apis.baidu.com/qunartravel/travellist/travellist?page=1" addAPIKEY:@"936b24796528abb71d4f5c8996e37598" success:^(NSMutableDictionary *dic)
+    NSString *url = [NSString stringWithFormat:@"http://apis.baidu.com/qunartravel/travellist/travellist?page=%ld",(long)downFresh];
+    [LZNetworkSingleton AddValueWithGET:url addAPIKEY:@"936b24796528abb71d4f5c8996e37598" success:^(NSMutableDictionary *dic)
      {
          NSArray *arr = dic[@"data"][@"books"] ;
          for (int i = 0 ; i < arr.count; i++)

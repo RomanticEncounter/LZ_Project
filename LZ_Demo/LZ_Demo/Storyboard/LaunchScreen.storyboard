@@ -16,7 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bb504895d4961423fae6e445146035ca.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="cLP-J5-jpK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QNW.png" translatesAutoresizingMaskIntoConstraints="NO" id="KAz-Hj-Fp8">
+                                <rect key="frame" x="50" y="70" width="500" height="70"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cLP-J5-jpK" secondAttribute="trailing" id="3Jr-2j-zN0"/>
+                            <constraint firstItem="cLP-J5-jpK" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="9WF-21-ozN"/>
+                            <constraint firstItem="KAz-Hj-Fp8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="CH0-5a-HCj"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="KAz-Hj-Fp8" secondAttribute="bottom" constant="460" id="G5B-t3-20a"/>
+                            <constraint firstItem="KAz-Hj-Fp8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="50" id="X8x-XJ-Qxr"/>
+                            <constraint firstItem="cLP-J5-jpK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hNB-MM-MPO"/>
+                            <constraint firstAttribute="trailing" secondItem="KAz-Hj-Fp8" secondAttribute="trailing" constant="50" id="igD-PF-Gbi"/>
+                            <constraint firstItem="cLP-J5-jpK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="tGl-6V-gHw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +42,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="QNW.png" width="417" height="128"/>
+        <image name="bb504895d4961423fae6e445146035ca.jpeg" width="1200" height="2249"/>
+    </resources>
 </document>

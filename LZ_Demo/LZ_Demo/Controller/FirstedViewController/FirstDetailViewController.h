@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstDetailViewController : UIViewController
-@property (nonatomic, copy) NSString * URL ;
+@property (nonatomic, copy) NSString *URL ;
 @end
