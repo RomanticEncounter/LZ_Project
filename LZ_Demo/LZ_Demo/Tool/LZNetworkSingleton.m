@@ -234,9 +234,10 @@
         [request addValue: apikey forHTTPHeaderField: @"apikey"];
         [NSURLConnection sendAsynchronousRequest: request queue: [NSOperationQueue mainQueue]completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error)
     {
-        if (error) {
-                        failRequest(error);
-                    }
+        if (error)
+        {
+            failRequest(error);
+        }
         else
         {
             NSMutableDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments error:nil];successRequest(result);

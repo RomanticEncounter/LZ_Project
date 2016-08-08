@@ -16,6 +16,15 @@
     self.userHeadImg.layer.cornerRadius = 25 ;
     self.userHeadImg.layer.masksToBounds = YES ;
     
+    /**
+     *  根据宽高比,自适应图片大小
+     */
+    self.picture.contentMode = UIViewContentModeScaleAspectFit;
+    self.picture.autoresizesSubviews = YES;
+    self.picture.autoresizingMask =
+    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+
+    
 }
 - (void)setModel:(FirstModel *)model
 {

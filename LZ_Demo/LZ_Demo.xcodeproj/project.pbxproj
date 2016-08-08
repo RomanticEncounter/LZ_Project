@@ -10,6 +10,7 @@
 		040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FDE1D54214400A3A3CB /* FirstTableViewCell.m */; };
 		040E9FE11D54214400A3A3CB /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */; };
 		040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FE31D54360300A3A3CB /* FirstModel.m */; };
+		04380D641D58226E008C84CA /* CommonSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04380D631D58226E008C84CA /* CommonSingleton.m */; };
 		043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 043906821D52D5C9004E942F /* LZNetworkSingleton.m */; };
 		04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */; };
 		04E1CFC91D547BB700D50AD8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1CFC81D547BB700D50AD8 /* Icon.png */; };
@@ -36,6 +37,8 @@
 		040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		040E9FE21D54360300A3A3CB /* FirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModel.h; sourceTree = "<group>"; };
 		040E9FE31D54360300A3A3CB /* FirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModel.m; sourceTree = "<group>"; };
+		04380D621D58226E008C84CA /* CommonSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSingleton.h; sourceTree = "<group>"; };
+		04380D631D58226E008C84CA /* CommonSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSingleton.m; sourceTree = "<group>"; };
 		043906811D52D5C9004E942F /* LZNetworkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNetworkSingleton.h; sourceTree = "<group>"; };
 		043906821D52D5C9004E942F /* LZNetworkSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNetworkSingleton.m; sourceTree = "<group>"; };
 		04E1CFC41D5479AA00D50AD8 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
@@ -253,8 +256,8 @@
 		04E2304A1D51E094005BD2FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04E1CFCA1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg */,
 				04E1CFCE1D5498D300D50AD8 /* QNW.png */,
+				04E1CFCA1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg */,
 				04E1CFC71D547BB700D50AD8 /* WEBICON */,
 			);
 			path = Resources;
@@ -265,6 +268,8 @@
 			children = (
 				043906811D52D5C9004E942F /* LZNetworkSingleton.h */,
 				043906821D52D5C9004E942F /* LZNetworkSingleton.m */,
+				04380D621D58226E008C84CA /* CommonSingleton.h */,
+				04380D631D58226E008C84CA /* CommonSingleton.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */,
 				04E230691D51E6B8005BD2FB /* ThirdViewController.m in Sources */,
 				04E230541D51E35E005BD2FB /* FirstViewController.m in Sources */,
+				04380D641D58226E008C84CA /* CommonSingleton.m in Sources */,
 				040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */,
 				04E230281D51C2A7005BD2FB /* main.m in Sources */,
 				04E2307A1D51F79F005BD2FB /* LZPlusButtonSubclass.m in Sources */,
