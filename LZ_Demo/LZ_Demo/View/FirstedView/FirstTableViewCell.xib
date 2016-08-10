@@ -57,15 +57,26 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xd0-2h-r0c">
                         <rect key="frame" x="6" y="102" width="308" height="210"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="height" constant="210" id="dCu-VJ-hax"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-tP-4aI">
+                        <rect key="frame" x="6" y="102.5" width="308" height="209.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="NwG-vy-dW2" firstAttribute="leading" secondItem="yb3-pP-H8w" secondAttribute="trailing" constant="8" id="0xU-Pb-qd9"/>
                     <constraint firstAttribute="trailing" secondItem="eeS-Ss-GCA" secondAttribute="trailing" constant="8" id="7lf-RN-RZ1"/>
                     <constraint firstItem="Xd0-2h-r0c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="A7E-MV-cy7"/>
+                    <constraint firstItem="LVH-tP-4aI" firstAttribute="top" secondItem="eeS-Ss-GCA" secondAttribute="bottom" constant="8" id="BRc-iQ-Epy"/>
                     <constraint firstAttribute="trailing" secondItem="l26-11-4IS" secondAttribute="trailing" constant="8" id="E5f-6q-ON0"/>
                     <constraint firstItem="NwG-vy-dW2" firstAttribute="top" secondItem="Fer-7w-lDO" secondAttribute="bottom" constant="8" id="FeL-hT-bh7"/>
                     <constraint firstItem="Fer-7w-lDO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="GXb-R1-3GO"/>
@@ -74,15 +85,19 @@
                     <constraint firstItem="eeS-Ss-GCA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="VDs-5R-bop"/>
                     <constraint firstItem="Xd0-2h-r0c" firstAttribute="top" secondItem="eeS-Ss-GCA" secondAttribute="bottom" constant="8" id="VZH-C9-Lg2"/>
                     <constraint firstItem="yb3-pP-H8w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="WJC-YI-o44"/>
+                    <constraint firstAttribute="trailing" secondItem="LVH-tP-4aI" secondAttribute="trailing" constant="6" id="glc-l3-iRI"/>
+                    <constraint firstItem="LVH-tP-4aI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="hMa-GT-chC"/>
                     <constraint firstAttribute="trailing" secondItem="Xd0-2h-r0c" secondAttribute="trailing" constant="6" id="k3p-Qd-LMN"/>
                     <constraint firstItem="Fer-7w-lDO" firstAttribute="leading" secondItem="yb3-pP-H8w" secondAttribute="trailing" constant="8" id="kg8-eS-xp5"/>
                     <constraint firstItem="yb3-pP-H8w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="my3-MC-jeb"/>
                     <constraint firstItem="l26-11-4IS" firstAttribute="leading" secondItem="Fer-7w-lDO" secondAttribute="trailing" constant="8" id="ugG-Qd-u3i"/>
                     <constraint firstAttribute="bottom" secondItem="Xd0-2h-r0c" secondAttribute="bottom" constant="3" id="w1e-PX-C3q"/>
+                    <constraint firstAttribute="bottom" secondItem="LVH-tP-4aI" secondAttribute="bottom" constant="3" id="wLF-H2-QfQ"/>
                     <constraint firstAttribute="trailing" secondItem="NwG-vy-dW2" secondAttribute="trailing" constant="8" id="xWP-dW-d3Q"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="checkButton" destination="LVH-tP-4aI" id="iR1-29-z6s"/>
                 <outlet property="detailLabel" destination="eeS-Ss-GCA" id="RYC-oJ-O0m"/>
                 <outlet property="picture" destination="Xd0-2h-r0c" id="EgT-es-m3U"/>
                 <outlet property="timeLabel" destination="l26-11-4IS" id="Tjq-Ox-di1"/>

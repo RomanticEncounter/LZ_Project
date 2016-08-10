@@ -8,4 +8,5 @@ pod 'SDWebImage', '~> 3.8.1'
 pod 'Masonry', '~> 1.0.1'
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.4’
 pod 'SVProgressHUD', '~> 2.0.3'
+pod 'WebViewJavascriptBridge', '~> 5.0.5'
 end

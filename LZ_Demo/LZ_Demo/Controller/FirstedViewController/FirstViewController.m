@@ -8,19 +8,17 @@
 
 #import "FirstViewController.h"
 #import "LZNetworkSingleton.h"
-#import "Masonry.h"
-#import "UITableView+FDTemplateLayoutCell.h"
 #import "FirstTableViewCell.h"
 #import "FirstModel.h"
 #import "FirstDetailViewController.h"
-#import "UITableView+FDTemplateLayoutCell.h"
-#import "MJRefresh.h"
 #import "CommonSingleton.h"
+
 @interface FirstViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *myTableView ;
     NSMutableArray *dataSourceArray ;
     NSInteger downFresh ;
+    UIImageView * checkView ;
 }
 
 @end
@@ -32,7 +30,7 @@
     /**
      *  导航栏上的图片
      */
-    UIImage *image = [UIImage imageNamed:@"Icon"];
+    UIImage *image = [UIImage imageNamed:@"QNW"];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, self.navigationController.navigationBar.bounds.size.height)];
     imageView.image = image ;
     imageView.contentMode = UIViewContentModeScaleAspectFit ;//设置
@@ -90,17 +88,32 @@
     {
         cell = [[FirstTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    
+    [cell.checkButton addTarget:self action:@selector(tapCilck:) forControlEvents:UIControlEventTouchUpInside];
+    cell.checkButton.tag = indexPath.row ;
     cell.model = dataSourceArray[indexPath.row];
     return cell ;
 }
+/**
+ *  自适应高度
+ */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [tableView fd_heightForCellWithIdentifier:@"cell" configuration:^(FirstTableViewCell*cell)
-            {
-                cell.model = dataSourceArray[indexPath.row];
-            }];
-
+/**
+ *  计算
+ */
+//    FirstModel * model = dataSourceArray[indexPath.row];
+//    FirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    [cell cellAutoLayoutHeight:model.detailText];
+//    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    return size.height;
+    
+/**
+ *  UITableView+FDTemplateLayoutCell
+ */
+    return [tableView fd_heightForCellWithIdentifier:@"cell" configuration:^(FirstTableViewCell *cell)
+    {
+        cell.model = dataSourceArray[indexPath.row];
+    }];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -111,6 +124,7 @@
     detailVC.title = model.title ;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
+#pragma mark - 数据请求
 /**
  *  请求
  */
@@ -145,6 +159,49 @@
          [CommonSingleton HUDdismiss];
      }];
 
+}
+#pragma mark - 点击图片可查看
+/**
+ *  查看图片
+ */
+- (void)tapCilck:(UIButton *)tap
+{
+    FirstModel *model = dataSourceArray[tap.tag];
+    checkView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH, S_HEIGHT)];
+    checkView.userInteractionEnabled = YES ;
+    [checkView sd_setImageWithURL:[NSURL URLWithString:model.backGroundImg] placeholderImage:nil];
+    checkView.contentMode = UIViewContentModeScaleToFill;
+    checkView.autoresizingMask =
+    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:checkView];
+    
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
+    effectView.autoresizingMask =
+    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    effectView.frame = [UIApplication sharedApplication].keyWindow.frame ;
+    [checkView addSubview:effectView];
+    
+    UIImageView * checkImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH, myTableView.bounds.size.height)];
+    checkImgView.userInteractionEnabled = YES ;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGestureClick:)];
+    [checkImgView addGestureRecognizer:tapGesture];
+    checkImgView.contentMode = UIViewContentModeScaleAspectFit;
+    checkImgView.autoresizesSubviews = YES;
+    checkImgView.autoresizingMask =
+    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
+    [checkImgView sd_setImageWithURL:[NSURL URLWithString:model.backGroundImg] placeholderImage:nil];
+    
+    [checkView addSubview:checkImgView];
+    
+}
+#pragma mark - 取消手势
+- (void)tapGestureClick:(UITapGestureRecognizer *)tap
+{
+    [checkView removeFromSuperview];
+    checkView = nil ;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

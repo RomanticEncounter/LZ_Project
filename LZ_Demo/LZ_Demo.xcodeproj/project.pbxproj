@@ -67,6 +67,7 @@
 		04E230731D51F0C3005BD2FB /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = LZ_Demo/Image.xcassets; sourceTree = "<group>"; };
 		04E230781D51F79F005BD2FB /* LZPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPlusButtonSubclass.h; sourceTree = "<group>"; };
 		04E230791D51F79F005BD2FB /* LZPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPlusButtonSubclass.m; sourceTree = "<group>"; };
+		04F121351D59D45A004309D9 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		204B2C42B9C6A85228111697 /* libPods-LZ_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZ_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E98719597E924FA85837A4 /* Pods-LZ_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZ_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZ_Demo/Pods-LZ_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		B85B2E82D868F6E010673AEB /* Pods-LZ_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZ_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZ_Demo/Pods-LZ_Demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 			children = (
 				04E2306D1D51E6FD005BD2FB /* AppDelegate.h */,
 				04E2306E1D51E716005BD2FB /* AppDelegate.m */,
+				04F121351D59D45A004309D9 /* Header.h */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";

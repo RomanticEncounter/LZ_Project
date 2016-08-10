@@ -7,7 +7,6 @@
 //
 
 #import "CommonSingleton.h"
-#import "SVProgressHUD.h"
 @implementation CommonSingleton
 
 /**

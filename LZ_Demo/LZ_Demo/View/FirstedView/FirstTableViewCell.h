@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *checkButton;
 @property (strong, nonatomic)FirstModel *model ;
+- (void)cellAutoLayoutHeight:(NSString *)str ;
 @end

@@ -9,16 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#ifdef DEBUG
-#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__,  ##__VA_ARGS__);
-#else
-#   define DLog(...)
-#endif
-#define S_WIDTH CGRectGetWidth([UIScreen mainScreen].bounds) //屏幕宽度
-#define S_HEIGHT CGRectGetHeight([UIScreen mainScreen].bounds) //屏幕高度
-#define STATUSHEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height //状态栏高
-#define NAVHEIGHT self.navigationController.navigationBar.frame.size.height //导航栏高
-#define TABBARHEIGHT self.tabBarController.tabBar.frame.size.height //分栏导航器高度
 typedef NS_ENUM(NSInteger, LZNetworkStatus)
 {
     

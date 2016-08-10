@@ -8,6 +8,7 @@
 
 #import "FirstTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "CommonSingleton.h"
 @implementation FirstTableViewCell
 
 - (void)awakeFromNib {
@@ -23,12 +24,12 @@
     self.picture.autoresizesSubviews = YES;
     self.picture.autoresizingMask =
     UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
 
     
 }
 - (void)setModel:(FirstModel *)model
 {
-//    model = self.model;
     _model = model ;
     [self.userHeadImg sd_setImageWithURL:[NSURL URLWithString:model.userHeadImg] placeholderImage:nil];
     [self.picture sd_setImageWithURL:[NSURL URLWithString:model.backGroundImg] placeholderImage:nil];
@@ -38,6 +39,13 @@
     self.detailLabel.text = model.detailText ;
     
 }
+- (void)cellAutoLayoutHeight:(NSString *)str
+{
+    self.detailLabel.lineBreakMode = NSLineBreakByWordWrapping ;
+    self.detailLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.detailLabel.frame);
+    self.detailLabel.text = str ;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
