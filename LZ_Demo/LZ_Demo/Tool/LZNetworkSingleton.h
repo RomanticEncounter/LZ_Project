@@ -13,8 +13,8 @@ typedef NS_ENUM(NSInteger, LZNetworkStatus)
 {
     
     StatusUnknown = -1,//未知
-    StatusNotReachable ,//无网状态
-    ReachableViaWWAN ,//手机网络
+    StatusNotReachable = 0,//无网状态
+    ReachableViaWWAN = 1,//手机网络
     StatusReachableViaWiFi = 2//Wifi网络
 //    ReachableVia2G,//2G网络
 //    ReachableVia3G,//3G网络

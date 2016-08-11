@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clock" rowHeight="100" id="KGk-i7-Jjw" customClass="ClockTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-br-CdD">
+                        <rect key="frame" x="263" y="35" width="51" height="31"/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上 午" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5b-nO-pPu">
+                        <rect key="frame" x="10" y="40" width="38.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="nuU-Zt-ZzH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5R-jI-3Rd">
+                        <rect key="frame" x="10" y="70" width="300" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-Zf-e2T">
+                        <rect key="frame" x="68" y="8" width="100.5" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="kkL-x4-uha"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OS8-br-CdD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="AVx-6U-fBS"/>
+                    <constraint firstItem="kmR-Zf-e2T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Jzh-Zw-dJ3"/>
+                    <constraint firstAttribute="trailing" secondItem="OS8-br-CdD" secondAttribute="trailing" constant="8" id="O5L-ub-IHd"/>
+                    <constraint firstItem="l5b-nO-pPu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ojg-eN-Ouz"/>
+                    <constraint firstItem="kmR-Zf-e2T" firstAttribute="leading" secondItem="l5b-nO-pPu" secondAttribute="trailing" constant="20" id="Zdr-Kn-UQk"/>
+                    <constraint firstItem="l5b-nO-pPu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="vj3-Uq-TfH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="263" y="248"/>
+        </tableViewCell>
+    </objects>
+</document>

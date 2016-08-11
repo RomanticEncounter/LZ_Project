@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - CYLTabBarController (1.5.4)
+  - DateTools (1.7.0)
   - Masonry (1.0.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.9)
@@ -28,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CYLTabBarController
+  - DateTools
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 0.9.2)
   - MJRefresh
@@ -39,6 +41,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CYLTabBarController: 7c2985a03fa6bde1d5a38d32e021f31ae46fff7c
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
@@ -47,6 +50,6 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
 
-PODFILE CHECKSUM: ad06aa9d7670595a93c5681d2064f90b7cc6bfed
+PODFILE CHECKSUM: 5f3a0e8f73cc6509385ce54e90346090a47e8563
 
 COCOAPODS: 1.0.1

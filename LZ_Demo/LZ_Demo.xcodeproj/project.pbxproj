@@ -28,6 +28,10 @@
 		04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230711D51EA57005BD2FB /* LZTabBarControllerConfig.m */; };
 		04E230741D51F0C3005BD2FB /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E230731D51F0C3005BD2FB /* Image.xcassets */; };
 		04E2307A1D51F79F005BD2FB /* LZPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230791D51F79F005BD2FB /* LZPlusButtonSubclass.m */; };
+		04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E70A6F1D5ABEE3007FCC0A /* Colours.m */; };
+		04E70A771D5AC4C2007FCC0A /* ClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E70A751D5AC4C2007FCC0A /* ClockTableViewCell.m */; };
+		04E70A781D5AC4C2007FCC0A /* ClockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E70A761D5AC4C2007FCC0A /* ClockTableViewCell.xib */; };
+		04E70A7B1D5AFDFA007FCC0A /* AddClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E70A7A1D5AFDFA007FCC0A /* AddClockViewController.m */; };
 		17BD30C6D655C72559FD0299 /* libPods-LZ_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 204B2C42B9C6A85228111697 /* libPods-LZ_Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +71,13 @@
 		04E230731D51F0C3005BD2FB /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = LZ_Demo/Image.xcassets; sourceTree = "<group>"; };
 		04E230781D51F79F005BD2FB /* LZPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPlusButtonSubclass.h; sourceTree = "<group>"; };
 		04E230791D51F79F005BD2FB /* LZPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPlusButtonSubclass.m; sourceTree = "<group>"; };
+		04E70A6E1D5ABEE3007FCC0A /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		04E70A6F1D5ABEE3007FCC0A /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		04E70A741D5AC4C2007FCC0A /* ClockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTableViewCell.h; sourceTree = "<group>"; };
+		04E70A751D5AC4C2007FCC0A /* ClockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTableViewCell.m; sourceTree = "<group>"; };
+		04E70A761D5AC4C2007FCC0A /* ClockTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockTableViewCell.xib; sourceTree = "<group>"; };
+		04E70A791D5AFDFA007FCC0A /* AddClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClockViewController.h; sourceTree = "<group>"; };
+		04E70A7A1D5AFDFA007FCC0A /* AddClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClockViewController.m; sourceTree = "<group>"; };
 		04F121351D59D45A004309D9 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		204B2C42B9C6A85228111697 /* libPods-LZ_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZ_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E98719597E924FA85837A4 /* Pods-LZ_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZ_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZ_Demo/Pods-LZ_Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +205,8 @@
 			children = (
 				04E230641D51E6A2005BD2FB /* SecondViewController.h */,
 				04E230651D51E6A2005BD2FB /* SecondViewController.m */,
+				04E70A791D5AFDFA007FCC0A /* AddClockViewController.h */,
+				04E70A7A1D5AFDFA007FCC0A /* AddClockViewController.m */,
 			);
 			path = SecondedViewController;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 		04E230441D51E094005BD2FB /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				04E70A6D1D5ABEE3007FCC0A /* Colour */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -282,8 +296,8 @@
 				04E230781D51F79F005BD2FB /* LZPlusButtonSubclass.h */,
 				04E230791D51F79F005BD2FB /* LZPlusButtonSubclass.m */,
 				04E2304D1D51E094005BD2FB /* FirstedView */,
-				04E2304E1D51E094005BD2FB /* FourthedView */,
 				04E2304F1D51E094005BD2FB /* SecondedView */,
+				04E2304E1D51E094005BD2FB /* FourthedView */,
 				04E230501D51E094005BD2FB /* ThirdedView */,
 			);
 			path = View;
@@ -309,6 +323,9 @@
 		04E2304F1D51E094005BD2FB /* SecondedView */ = {
 			isa = PBXGroup;
 			children = (
+				04E70A741D5AC4C2007FCC0A /* ClockTableViewCell.h */,
+				04E70A751D5AC4C2007FCC0A /* ClockTableViewCell.m */,
+				04E70A761D5AC4C2007FCC0A /* ClockTableViewCell.xib */,
 			);
 			path = SecondedView;
 			sourceTree = "<group>";
@@ -327,6 +344,15 @@
 				04E230601D51E639005BD2FB /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		04E70A6D1D5ABEE3007FCC0A /* Colour */ = {
+			isa = PBXGroup;
+			children = (
+				04E70A6E1D5ABEE3007FCC0A /* Colours.h */,
+				04E70A6F1D5ABEE3007FCC0A /* Colours.m */,
+			);
+			path = Colour;
 			sourceTree = "<group>";
 		};
 		5837B1F8F510971D2F33C917 /* Frameworks */ = {
@@ -413,6 +439,7 @@
 				04E1CFCB1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg in Resources */,
 				04E230621D51E639005BD2FB /* Main.storyboard in Resources */,
 				04E230331D51C2A7005BD2FB /* Assets.xcassets in Resources */,
+				04E70A781D5AC4C2007FCC0A /* ClockTableViewCell.xib in Resources */,
 				04E230741D51F0C3005BD2FB /* Image.xcassets in Resources */,
 				04E230611D51E639005BD2FB /* LaunchScreen.storyboard in Resources */,
 			);
@@ -473,11 +500,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E70A771D5AC4C2007FCC0A /* ClockTableViewCell.m in Sources */,
 				04E2306C1D51E6D7005BD2FB /* FourthViewController.m in Sources */,
 				043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */,
 				040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */,
+				04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */,
 				04E230661D51E6A2005BD2FB /* SecondViewController.m in Sources */,
 				04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */,
+				04E70A7B1D5AFDFA007FCC0A /* AddClockViewController.m in Sources */,
 				04E2306F1D51E716005BD2FB /* AppDelegate.m in Sources */,
 				04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */,
 				04E230691D51E6B8005BD2FB /* ThirdViewController.m in Sources */,
@@ -579,11 +609,14 @@
 			baseConfigurationReference = B85B2E82D868F6E010673AEB /* Pods-LZ_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZYZX.LZ-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -592,11 +625,14 @@
 			baseConfigurationReference = A6E98719597E924FA85837A4 /* Pods-LZ_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZYZX.LZ-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

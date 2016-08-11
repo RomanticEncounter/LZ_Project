@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIWebView *webView = [[UIWebView alloc]init];
+    UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH, S_HEIGHT)];
     
     webView.delegate = self;
     
@@ -37,12 +37,12 @@
     [self.view addSubview: webView];
     
     [webView loadRequest:request];
-    self.bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
-
-    [self.bridge registerHandler:@"ObjC Echo" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"ObjC Echo called with: %@", data);
-        responseCallback(data);
-    }];
+//    self.bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
+//
+//    [self.bridge registerHandler:@"ObjC Echo" handler:^(id data, WVJBResponseCallback responseCallback) {
+//        NSLog(@"ObjC Echo called with: %@", data);
+//        responseCallback(data);
+//    }];
     
 }
 - (void)didReceiveMemoryWarning {

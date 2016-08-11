@@ -14,4 +14,5 @@
 #import "UIImageView+WebCache.h"
 #import "SVProgressHUD.h"
 #import "WebViewJavascriptBridge.h"
+#import "Colours.h"
 #endif /* Header_h */
