@@ -50,7 +50,7 @@
         [dataSourceArray removeAllObjects];
         downFresh = 1 ;
         [self HttpRequest];
-        [myTableView.mj_header endRefreshing];
+        
     }];
     myTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         downFresh = downFresh + 1 ;
@@ -59,7 +59,6 @@
             downFresh = 100 ;
         }
         [self HttpRequest];
-        [myTableView.mj_footer endRefreshing];
     }];
     
     [myTableView mas_makeConstraints:^(MASConstraintMaker *make)
@@ -152,14 +151,33 @@
              [myTableView reloadData];
          }
          [CommonSingleton HUDdismiss];
+         [myTableView.mj_header endRefreshing];
+         [myTableView.mj_footer endRefreshing];
      }
     fail:^(NSError *error)
      {
          NSLog(@"%@",error);
          [CommonSingleton HUDdismiss];
+         [myTableView.mj_header endRefreshing];
+         [myTableView.mj_footer endRefreshing];
      }];
 
 }
+//- (void)HttpRequest
+//{
+//    NSString *url = [NSString stringWithFormat:@"http://apptest.gnwai.com/zyzx/index.php/Cgi/TradingCenter/getAllLiveRoom"];
+//    [LZNetworkSingleton POST:url Parameters:nil Success:^(NSMutableDictionary *dic) {
+//        NSLog(@"%@",dic);
+//        NSDictionary  *dict = dic[@"data"][@"type"];
+//        NSLog(@"%@",dict);
+//        NSArray *array = dic[@"data"][@"type"];
+//        NSLog(@"%@",array);
+//        
+//    }
+//    Failure:^(NSError *error) {
+//        
+//    }];
+//}
 #pragma mark - 点击图片可查看
 /**
  *  查看图片

@@ -48,7 +48,7 @@
     
     [myAlarmClockTableView registerNib:[UINib nibWithNibName:@"ClockTableViewCell" bundle:nil] forCellReuseIdentifier:@"clock"];
     
-    
+    [LZLocalNotificationSingleton registLocalNotificationAction];
 }
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -65,7 +65,7 @@
 
 - (void)editItemClick:(UIBarButtonItem *)edit
 {
-    
+    [LZLocalNotificationSingleton actionSendMess:10 body:@"早安" noticeStr:@"早"];
 }
 - (void)addItemClick:(UIBarButtonItem *)add
 {

@@ -15,4 +15,6 @@
 #import "SVProgressHUD.h"
 #import "WebViewJavascriptBridge.h"
 #import "Colours.h"
+#import "DateTools.h"
+#import "LZLocalNotificationSingleton.h"
 #endif /* Header_h */

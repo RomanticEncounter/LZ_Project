@@ -12,6 +12,7 @@
 		040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FE31D54360300A3A3CB /* FirstModel.m */; };
 		04380D641D58226E008C84CA /* CommonSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04380D631D58226E008C84CA /* CommonSingleton.m */; };
 		043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 043906821D52D5C9004E942F /* LZNetworkSingleton.m */; };
+		04488A511D61B16100AC9C72 /* LZLocalNotificationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04488A501D61B16100AC9C72 /* LZLocalNotificationSingleton.m */; };
 		04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */; };
 		04E1CFC91D547BB700D50AD8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1CFC81D547BB700D50AD8 /* Icon.png */; };
 		04E1CFCB1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 04E1CFCA1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg */; };
@@ -45,6 +46,8 @@
 		04380D631D58226E008C84CA /* CommonSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSingleton.m; sourceTree = "<group>"; };
 		043906811D52D5C9004E942F /* LZNetworkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNetworkSingleton.h; sourceTree = "<group>"; };
 		043906821D52D5C9004E942F /* LZNetworkSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNetworkSingleton.m; sourceTree = "<group>"; };
+		04488A4F1D61B16100AC9C72 /* LZLocalNotificationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLocalNotificationSingleton.h; sourceTree = "<group>"; };
+		04488A501D61B16100AC9C72 /* LZLocalNotificationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLocalNotificationSingleton.m; sourceTree = "<group>"; };
 		04E1CFC41D5479AA00D50AD8 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
 		04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDetailViewController.m; sourceTree = "<group>"; };
 		04E1CFC81D547BB700D50AD8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				043906821D52D5C9004E942F /* LZNetworkSingleton.m */,
 				04380D621D58226E008C84CA /* CommonSingleton.h */,
 				04380D631D58226E008C84CA /* CommonSingleton.m */,
+				04488A4F1D61B16100AC9C72 /* LZLocalNotificationSingleton.h */,
+				04488A501D61B16100AC9C72 /* LZLocalNotificationSingleton.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				04E2306C1D51E6D7005BD2FB /* FourthViewController.m in Sources */,
 				043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */,
 				040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */,
+				04488A511D61B16100AC9C72 /* LZLocalNotificationSingleton.m in Sources */,
 				04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */,
 				04E230661D51E6A2005BD2FB /* SecondViewController.m in Sources */,
 				04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */,
@@ -609,8 +615,8 @@
 			baseConfigurationReference = B85B2E82D868F6E010673AEB /* Pods-LZ_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -625,8 +631,8 @@
 			baseConfigurationReference = A6E98719597E924FA85837A4 /* Pods-LZ_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
