@@ -19,6 +19,7 @@
     NSMutableArray *dataSourceArray ;
     NSInteger downFresh ;
     UIImageView * checkView ;
+    UIImageView * checkImgView ;
 }
 
 @end
@@ -194,23 +195,31 @@
     
     [[UIApplication sharedApplication].keyWindow addSubview:checkView];
     
+    //蒙层
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:blur];
     effectView.autoresizingMask =
     UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    effectView.frame = [UIApplication sharedApplication].keyWindow.frame ;
+    effectView.frame = checkView.frame ;
     [checkView addSubview:effectView];
     
-    UIImageView * checkImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH, myTableView.bounds.size.height)];
+    checkImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH, myTableView.bounds.size.height)];
     checkImgView.userInteractionEnabled = YES ;
+    
+    //点击手势
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGestureClick:)];
-    [checkImgView addGestureRecognizer:tapGesture];
+    [checkView addGestureRecognizer:tapGesture];//点击手势添加到底层上
+    
+    
     checkImgView.contentMode = UIViewContentModeScaleAspectFit;
     checkImgView.autoresizesSubviews = YES;
     checkImgView.autoresizingMask =
     UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
     [checkImgView sd_setImageWithURL:[NSURL URLWithString:model.backGroundImg] placeholderImage:nil];
+    //捏合手势
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchAction:)];
+    [checkImgView addGestureRecognizer:pinchGesture];//捏合手势添加到图片上
     
     [checkView addSubview:checkImgView];
     
@@ -220,6 +229,43 @@
 {
     [checkView removeFromSuperview];
     checkView = nil ;
+    checkImgView = nil ;
+}
+#pragma mark - 捏合手势
+- (void)pinchAction:(UIPinchGestureRecognizer *)pinch
+{
+    switch (pinch.state)
+    {
+        case UIGestureRecognizerStateBegan:
+        {
+            
+            checkImgView.frame = pinch.view.frame ;
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+//            CGFloat w = CGRectGetWidth(checkImgView.frame)*(1-pinch.scale);
+//            CGFloat h = CGRectGetHeight(checkImgView.frame)*(1-pinch.scale);
+//            pinch.view.frame = CGRectInset(checkImgView.frame, w, h);
+            pinch.view.transform = CGAffineTransformMakeScale(pinch.scale, pinch.scale);
+        }
+            break ;
+        case UIGestureRecognizerStateEnded:
+        {
+            NSLog(@"捏合结束");
+            if (checkImgView.frame.size.width < 150 ||checkImgView.frame.size.height< 150)
+            {
+                [UIView animateWithDuration:0.5 animations:^{
+                    checkImgView.frame = CGRectMake(0, 0, S_WIDTH, myTableView.bounds.size.height) ;
+                    checkImgView.autoresizingMask =
+                    UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+                }];
+            }
+        }
+            break;
+        default:
+            break;
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

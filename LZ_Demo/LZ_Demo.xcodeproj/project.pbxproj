@@ -32,7 +32,7 @@
 		04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E70A6F1D5ABEE3007FCC0A /* Colours.m */; };
 		04E70A771D5AC4C2007FCC0A /* ClockTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E70A751D5AC4C2007FCC0A /* ClockTableViewCell.m */; };
 		04E70A781D5AC4C2007FCC0A /* ClockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E70A761D5AC4C2007FCC0A /* ClockTableViewCell.xib */; };
-		04E70A7B1D5AFDFA007FCC0A /* AddClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E70A7A1D5AFDFA007FCC0A /* AddClockViewController.m */; };
+		04E7FFF81D6400F700008748 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E7FFF71D6400F700008748 /* AVFoundation.framework */; };
 		17BD30C6D655C72559FD0299 /* libPods-LZ_Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 204B2C42B9C6A85228111697 /* libPods-LZ_Demo.a */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +79,7 @@
 		04E70A741D5AC4C2007FCC0A /* ClockTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockTableViewCell.h; sourceTree = "<group>"; };
 		04E70A751D5AC4C2007FCC0A /* ClockTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockTableViewCell.m; sourceTree = "<group>"; };
 		04E70A761D5AC4C2007FCC0A /* ClockTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockTableViewCell.xib; sourceTree = "<group>"; };
-		04E70A791D5AFDFA007FCC0A /* AddClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClockViewController.h; sourceTree = "<group>"; };
-		04E70A7A1D5AFDFA007FCC0A /* AddClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClockViewController.m; sourceTree = "<group>"; };
+		04E7FFF71D6400F700008748 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		04F121351D59D45A004309D9 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		204B2C42B9C6A85228111697 /* libPods-LZ_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZ_Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E98719597E924FA85837A4 /* Pods-LZ_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZ_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZ_Demo/Pods-LZ_Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E7FFF81D6400F700008748 /* AVFoundation.framework in Frameworks */,
 				17BD30C6D655C72559FD0299 /* libPods-LZ_Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,8 +208,6 @@
 			children = (
 				04E230641D51E6A2005BD2FB /* SecondViewController.h */,
 				04E230651D51E6A2005BD2FB /* SecondViewController.m */,
-				04E70A791D5AFDFA007FCC0A /* AddClockViewController.h */,
-				04E70A7A1D5AFDFA007FCC0A /* AddClockViewController.m */,
 			);
 			path = SecondedViewController;
 			sourceTree = "<group>";
@@ -363,6 +361,7 @@
 		5837B1F8F510971D2F33C917 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04E7FFF71D6400F700008748 /* AVFoundation.framework */,
 				204B2C42B9C6A85228111697 /* libPods-LZ_Demo.a */,
 			);
 			name = Frameworks;
@@ -513,7 +512,6 @@
 				04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */,
 				04E230661D51E6A2005BD2FB /* SecondViewController.m in Sources */,
 				04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */,
-				04E70A7B1D5AFDFA007FCC0A /* AddClockViewController.m in Sources */,
 				04E2306F1D51E716005BD2FB /* AppDelegate.m in Sources */,
 				04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */,
 				04E230691D51E6B8005BD2FB /* ThirdViewController.m in Sources */,
@@ -615,8 +613,8 @@
 			baseConfigurationReference = B85B2E82D868F6E010673AEB /* Pods-LZ_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -631,8 +629,8 @@
 			baseConfigurationReference = A6E98719597E924FA85837A4 /* Pods-LZ_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 776476088@qq.com (4YB34578JD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LZ_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

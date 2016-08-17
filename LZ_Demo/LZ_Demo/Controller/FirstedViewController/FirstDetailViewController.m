@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, S_WIDTH, S_HEIGHT)];
     
     webView.delegate = self;
@@ -44,6 +45,30 @@
 //        responseCallback(data);
 //    }];
     
+}
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [CommonSingleton HUDNativeloadingWithString:@"正在努力加载..."];
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [CommonSingleton HUDdismiss];
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error
+{
+    [CommonSingleton HUDdismiss];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:@"页面加载失败..." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *reloadingAction = [UIAlertAction actionWithTitle:@"重新加载" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:_URL]];
+        [webView loadRequest:request];
+    }];
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alertController addAction:reloadingAction];
+    [alertController addAction:sureAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

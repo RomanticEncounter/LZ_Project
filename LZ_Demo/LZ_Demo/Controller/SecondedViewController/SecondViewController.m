@@ -9,7 +9,6 @@
 #import "SecondViewController.h"
 #import "CommonSingleton.h"
 #import "ClockTableViewCell.h"
-#import "AddClockViewController.h"
 @interface SecondViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *myAlarmClockTableView ;
@@ -65,12 +64,12 @@
 
 - (void)editItemClick:(UIBarButtonItem *)edit
 {
-    [LZLocalNotificationSingleton actionSendMess:10 body:@"早安" noticeStr:@"早"];
+    
 }
 - (void)addItemClick:(UIBarButtonItem *)add
 {
-    AddClockViewController *addVC = [[AddClockViewController alloc]init];
-    [self.navigationController pushViewController:addVC animated:YES];
+//    AddClockViewController *addVC = [[AddClockViewController alloc]init];
+//    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

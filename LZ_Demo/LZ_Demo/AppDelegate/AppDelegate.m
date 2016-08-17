@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "LZTabBarControllerConfig.h"
 @interface AppDelegate ()
+{
+    NSTimer *timer ;
+}
 
 @end
 
@@ -88,9 +91,9 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     // 获取通知所带的数据
-    NSString *notMess = [notification.userInfo objectForKey:@"key"];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"本地通知(前台)"
-                                                    message:notMess
+//    NSString *notMess = [notification.userInfo objectForKey:@"key"];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"闹钟响了"
+                                                    message:@"睡你麻痹起来嗨..."
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
@@ -106,7 +109,16 @@
 //    [LZLocalNotificationSingleton cancelLocalNotificationWithKey:@"key"];
     
 }
-
-
+/**
+ *  本地推送按钮回调
+ *  @param identifier   推送按钮的identifier
+ */
+-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
+{
+    //在非本App界面时收到本地消息，下拉消息会有快捷回复的按钮，点击按钮后调用的方法，根据identifier来判断点击的哪个按钮，notification为消息内容
+    NSLog(@"%@----%@",identifier,notification);
+    //处理完消息，最后一定要调用这个代码块
+    completionHandler();
+}
 
 @end
