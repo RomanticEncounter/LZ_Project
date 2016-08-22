@@ -100,12 +100,12 @@
         NSURL *videoURL = [NSURL URLWithString:dic.allValues.firstObject];
         
         // 设置player相关参数(需要设置imageView的tag值，此处设置的为101)
-//        [weakSelf.playerView setVideoURL:videoURL
-//                           withTableView:weakSelf.tableView
-//                             AtIndexPath:weakIndexPath
-//                        withImageViewTag:101];
-//        [weakSelf.playerView addPlayerToCellImageView:weakCell.picView];
-        [weakSelf.playerView setVideoURL:videoURL withTableView:weakSelf.tableView AtIndexPath:weakIndexPath withImageViewTag:101];
+        [weakSelf.playerView setVideoURL:videoURL
+                           withTableView:myAlarmClockTableView
+                             AtIndexPath:weakIndexPath
+                        withImageViewTag:101];
+        [weakSelf.playerView addPlayerToCellImageView:weakCell.picVedioView];
+        [weakSelf.playerView setVideoURL:videoURL withTableView:myAlarmClockTableView AtIndexPath:weakIndexPath withImageViewTag:101];
         
         // 下载功能
         weakSelf.playerView.hasDownload   = YES;

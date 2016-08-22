@@ -17,11 +17,13 @@
     self.picVedioView.tag = 101;
     
     self.playButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.playButton setImage:[UIImage imageNamed:@"video_list_cell_big_icon"] forState:UIControlStateNormal];
+    [self.playButton setImage:[UIImage imageNamed:@"account_highlight"] forState:UIControlStateNormal];
     [self.playButton addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
-    [self.playButton addSubview:self.playButton];
+    [self.picVedioView addSubview:self.playButton];
     [self.playButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.picVedioView);
+//        make.width.equalTo(@30);
+//        make.height.equalTo(@30);
     }];
     
 }

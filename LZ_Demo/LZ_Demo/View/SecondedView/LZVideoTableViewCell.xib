@@ -17,12 +17,13 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UXV-Xb-kst">
                         <rect key="frame" x="8" y="8" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="cRp-nZ-DC7"/>
                             <constraint firstAttribute="width" constant="40" id="wIS-Ie-W3v"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W74-3M-BU9">
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W74-3M-BU9">
                         <rect key="frame" x="0.0" y="82" width="320" height="158.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="W74-3M-BU9" secondAttribute="height" multiplier="16:9" priority="750" id="586-xv-2gr"/>
