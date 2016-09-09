@@ -21,29 +21,81 @@
 
 @interface CommonSingleton : NSObject
 
+@property (nonatomic, strong) MBProgressHUD *mbHUD ;
+
 + (CommonSingleton *)shareSingleton ;
+
+/*********************** SVProgressHUD ***********************/
+
 /**
- *  HUD
+ *  SV菊花+文字
  */
-+ (void)HUDloadingWithString:(NSString *)str ;
++ (void)SVHUDloadingWithString:(NSString *)str ;
 /**
- *  旋转的HUD
+ *  SV旋转的loading+文字
  */
-+ (void)HUDNativeloadingWithString:(NSString *)str ;
++ (void)SVHUDNativeloadingWithString:(NSString *)str ;
 /**
- *  正确提示
+ *  SVHUD正确提示
  */
-+ (void)SuccessWithString:(NSString *)str ;
++ (void)SVHUDSuccessWithString:(NSString *)str ;
 /**
- *  错误提示
+ *  SVHUD错误提示
  */
-+(void)ErrorWithString:(NSString *)str ;
++ (void)SVHUDErrorWithString:(NSString *)str ;
 /**
- *  警告提示
+ *  SVHUD警告提示
  */
-+ (void)WarningWithString:(NSString*)str ;
++ (void)SVHUDWarningWithString:(NSString*)str ;
 /**
- *  HUD消失
+ *  SVHUD消失
  */
-+ (void)HUDdismiss ;
++ (void)SVHUDdismiss ;
+
+/*********************** MBProgressHUD ***********************/
+
+/**
+ *  MB文字HUD
+ */
++ (void)MBTextHUDAddView:(UIView *)view Text:(NSString *)text ;
+
+/**
+ *  MB图片HUD
+ */
++ (void)MBPictureHUDAddView:(UIView *)view ImageName:(NSString *)imageName Text:(NSString *)text ;
+/**
+ *  MB菊花
+ */
++ (void)MBLoadingHUDAddView:(UIView *)view ;
+
+/**
+ *  MB菊花 + 文字
+ */
++ (void)MBLoadingHUDAddView:(UIView *)view Text:(NSString *)text ;
+
+/**
+ *  MB详情HUD
+ */
++ (void)MBDetailHUDAddView:(UIView *)view Text:(NSString *)text DetaiText:(NSString *)detailText ;
+
+/**
+ *  MBHUD + 进度
+ */
++ (void)MBProgressHUDAddView:(UIView *)view Text:(NSString *)text Progress:(NSProgress *)progress ;
+
+
+/**
+ *  MBHUD✅正确提示
+ */
++ (void)MBSuccessHUDAddView:(UIView *)view Text:(NSString *)text ;
+
+/**
+ *  MBHUD❎错误提示
+ */
++ (void)MBErrorHUDAddView:(UIView *)view Text:(NSString *)text ;
+
+/**
+ *  MBHUD消失
+ */
++ (void)MBHUDdismiss ;
 @end

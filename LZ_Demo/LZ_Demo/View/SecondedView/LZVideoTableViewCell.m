@@ -22,8 +22,6 @@
     [self.picVedioView addSubview:self.playButton];
     [self.playButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.picVedioView);
-//        make.width.equalTo(@30);
-//        make.height.equalTo(@30);
     }];
     
 }

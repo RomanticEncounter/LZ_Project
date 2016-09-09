@@ -7,7 +7,7 @@
 //
 
 #import "ThirdViewController.h"
-
+#import "LZLocalNotificationSingleton.h"
 @interface ThirdViewController ()
 
 @end
@@ -18,8 +18,17 @@
     [super viewDidLoad];
     self.navigationItem.title = @"第三页";
     self.view.backgroundColor = [UIColor brownColor];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    btn.backgroundColor = [UIColor whiteColor];
+    [btn addTarget:self action:@selector(pushAPP) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    [LZLocalNotificationSingleton registLocalNotification];
 }
-
+- (void)pushAPP
+{
+    [LZLocalNotificationSingleton sendMess:60 body:@"早上好" noticeStr:@"早"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

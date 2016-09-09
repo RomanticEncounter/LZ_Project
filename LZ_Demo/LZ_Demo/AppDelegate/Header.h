@@ -17,4 +17,5 @@
 #import "Colours.h"
 #import "DateTools.h"
 #import "LZLocalNotificationSingleton.h"
+#import "MBProgressHUD.h"
 #endif /* Header_h */

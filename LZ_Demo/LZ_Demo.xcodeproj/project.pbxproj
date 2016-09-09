@@ -10,6 +10,9 @@
 		040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FDE1D54214400A3A3CB /* FirstTableViewCell.m */; };
 		040E9FE11D54214400A3A3CB /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */; };
 		040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FE31D54360300A3A3CB /* FirstModel.m */; };
+		041A69651D82A168003FC55F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041A69641D82A168003FC55F /* Default-568h@2x.png */; };
+		043078C61D815BDD00089C2E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043078C51D815BDD00089C2E /* SecondViewController.m */; };
+		043078C81D815C1000089C2E /* 170144_RnOu_1428332.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 043078C71D815C1000089C2E /* 170144_RnOu_1428332.jpg */; };
 		04380D641D58226E008C84CA /* CommonSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04380D631D58226E008C84CA /* CommonSingleton.m */; };
 		043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 043906821D52D5C9004E942F /* LZNetworkSingleton.m */; };
 		044451001D658FC900823933 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 044450FF1D658FC900823933 /* videoData.json */; };
@@ -27,7 +30,6 @@
 		04E230541D51E35E005BD2FB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230531D51E35E005BD2FB /* FirstViewController.m */; };
 		04E230611D51E639005BD2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E2305F1D51E639005BD2FB /* LaunchScreen.storyboard */; };
 		04E230621D51E639005BD2FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E230601D51E639005BD2FB /* Main.storyboard */; };
-		04E230661D51E6A2005BD2FB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230651D51E6A2005BD2FB /* SecondViewController.m */; };
 		04E230691D51E6B8005BD2FB /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E230681D51E6B8005BD2FB /* ThirdViewController.m */; };
 		04E2306C1D51E6D7005BD2FB /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2306B1D51E6D7005BD2FB /* FourthViewController.m */; };
 		04E2306F1D51E716005BD2FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2306E1D51E716005BD2FB /* AppDelegate.m */; };
@@ -45,6 +47,10 @@
 		040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		040E9FE21D54360300A3A3CB /* FirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModel.h; sourceTree = "<group>"; };
 		040E9FE31D54360300A3A3CB /* FirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModel.m; sourceTree = "<group>"; };
+		041A69641D82A168003FC55F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		043078C41D815BDD00089C2E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		043078C51D815BDD00089C2E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		043078C71D815C1000089C2E /* 170144_RnOu_1428332.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 170144_RnOu_1428332.jpg; sourceTree = "<group>"; };
 		04380D621D58226E008C84CA /* CommonSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSingleton.h; sourceTree = "<group>"; };
 		04380D631D58226E008C84CA /* CommonSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSingleton.m; sourceTree = "<group>"; };
 		043906811D52D5C9004E942F /* LZNetworkSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNetworkSingleton.h; sourceTree = "<group>"; };
@@ -72,8 +78,6 @@
 		04E230531D51E35E005BD2FB /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		04E2305F1D51E639005BD2FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E230601D51E639005BD2FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		04E230641D51E6A2005BD2FB /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		04E230651D51E6A2005BD2FB /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		04E230671D51E6B8005BD2FB /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		04E230681D51E6B8005BD2FB /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		04E2306A1D51E6D7005BD2FB /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
@@ -214,8 +218,8 @@
 		04E230421D51E094005BD2FB /* SecondedViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04E230641D51E6A2005BD2FB /* SecondViewController.h */,
-				04E230651D51E6A2005BD2FB /* SecondViewController.m */,
+				043078C41D815BDD00089C2E /* SecondViewController.h */,
+				043078C51D815BDD00089C2E /* SecondViewController.m */,
 			);
 			path = SecondedViewController;
 			sourceTree = "<group>";
@@ -288,6 +292,8 @@
 			children = (
 				04E1CFCE1D5498D300D50AD8 /* QNW.png */,
 				04E1CFCA1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg */,
+				043078C71D815C1000089C2E /* 170144_RnOu_1428332.jpg */,
+				041A69641D82A168003FC55F /* Default-568h@2x.png */,
 				04E1CFC71D547BB700D50AD8 /* WEBICON */,
 			);
 			path = Resources;
@@ -455,9 +461,11 @@
 				040E9FE11D54214400A3A3CB /* FirstTableViewCell.xib in Resources */,
 				04E1CFCB1D54941600D50AD8 /* bb504895d4961423fae6e445146035ca.jpeg in Resources */,
 				04E230621D51E639005BD2FB /* Main.storyboard in Resources */,
+				041A69651D82A168003FC55F /* Default-568h@2x.png in Resources */,
 				044451001D658FC900823933 /* videoData.json in Resources */,
 				04E230331D51C2A7005BD2FB /* Assets.xcassets in Resources */,
 				04E230741D51F0C3005BD2FB /* Image.xcassets in Resources */,
+				043078C81D815C1000089C2E /* 170144_RnOu_1428332.jpg in Resources */,
 				04E230611D51E639005BD2FB /* LaunchScreen.storyboard in Resources */,
 				044451051D6596F000823933 /* LZVideoTableViewCell.xib in Resources */,
 			);
@@ -518,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043078C61D815BDD00089C2E /* SecondViewController.m in Sources */,
 				04E2306C1D51E6D7005BD2FB /* FourthViewController.m in Sources */,
 				044451041D6596F000823933 /* LZVideoTableViewCell.m in Sources */,
 				0444510B1D659F9600823933 /* LZPlayerResolution.m in Sources */,
@@ -525,7 +534,6 @@
 				040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */,
 				04488A511D61B16100AC9C72 /* LZLocalNotificationSingleton.m in Sources */,
 				04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */,
-				04E230661D51E6A2005BD2FB /* SecondViewController.m in Sources */,
 				04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */,
 				04E2306F1D51E716005BD2FB /* AppDelegate.m in Sources */,
 				04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */,

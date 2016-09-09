@@ -48,15 +48,15 @@
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [CommonSingleton HUDNativeloadingWithString:@"正在努力加载..."];
+    [CommonSingleton SVHUDNativeloadingWithString:@"正在努力加载..."];
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [CommonSingleton HUDdismiss];
+    [CommonSingleton SVHUDdismiss];
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error
 {
-    [CommonSingleton HUDdismiss];
+    [CommonSingleton SVHUDdismiss];
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:@"页面加载失败..." preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *reloadingAction = [UIAlertAction actionWithTitle:@"重新加载" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         

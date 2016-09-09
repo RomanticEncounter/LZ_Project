@@ -44,6 +44,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -107,7 +108,7 @@
     
     // 在不需要再推送时，可以取消推送
 //    [LZLocalNotificationSingleton cancelLocalNotificationWithKey:@"key"];
-    
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
 }
 /**
  *  本地推送按钮回调
@@ -117,6 +118,7 @@
 {
     //在非本App界面时收到本地消息，下拉消息会有快捷回复的按钮，点击按钮后调用的方法，根据identifier来判断点击的哪个按钮，notification为消息内容
     NSLog(@"%@----%@",identifier,notification);
+    
     //处理完消息，最后一定要调用这个代码块
     completionHandler();
 }

@@ -130,7 +130,7 @@
  */
 - (void)HttpRequest
 {
-    [CommonSingleton HUDloadingWithString:@"正在努力加载中..."];
+    [CommonSingleton SVHUDloadingWithString:@"正在努力加载中..."];
     NSString *url = [NSString stringWithFormat:@"http://apis.baidu.com/qunartravel/travellist/travellist?page=%ld",(long)downFresh];
     [LZNetworkSingleton AddValueWithGET:url addAPIKEY:@"936b24796528abb71d4f5c8996e37598" success:^(NSMutableDictionary *dic)
      {
@@ -151,14 +151,14 @@
          {
              [myTableView reloadData];
          }
-         [CommonSingleton HUDdismiss];
+         [CommonSingleton SVHUDdismiss];
          [myTableView.mj_header endRefreshing];
          [myTableView.mj_footer endRefreshing];
      }
     fail:^(NSError *error)
      {
          NSLog(@"%@",error);
-         [CommonSingleton HUDdismiss];
+         [CommonSingleton SVHUDdismiss];
          [myTableView.mj_header endRefreshing];
          [myTableView.mj_footer endRefreshing];
      }];
