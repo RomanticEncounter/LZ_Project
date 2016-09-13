@@ -10,6 +10,12 @@
 		040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FDE1D54214400A3A3CB /* FirstTableViewCell.m */; };
 		040E9FE11D54214400A3A3CB /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */; };
 		040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040E9FE31D54360300A3A3CB /* FirstModel.m */; };
+		0414BA761D8641E000FF51F1 /* LZAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA6B1D8641E000FF51F1 /* LZAuthor.m */; };
+		0414BA771D8641E000FF51F1 /* LZBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA6D1D8641E000FF51F1 /* LZBaseClass.m */; };
+		0414BA781D8641E000FF51F1 /* LZConsumption.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA6F1D8641E000FF51F1 /* LZConsumption.m */; };
+		0414BA791D8641E000FF51F1 /* LZPlayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA711D8641E000FF51F1 /* LZPlayInfo.m */; };
+		0414BA7A1D8641E000FF51F1 /* LZProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA731D8641E000FF51F1 /* LZProvider.m */; };
+		0414BA7B1D8641E000FF51F1 /* LZVideoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414BA751D8641E000FF51F1 /* LZVideoList.m */; };
 		041A69651D82A168003FC55F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041A69641D82A168003FC55F /* Default-568h@2x.png */; };
 		043078C61D815BDD00089C2E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043078C51D815BDD00089C2E /* SecondViewController.m */; };
 		043078C81D815C1000089C2E /* 170144_RnOu_1428332.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 043078C71D815C1000089C2E /* 170144_RnOu_1428332.jpg */; };
@@ -18,8 +24,6 @@
 		044451001D658FC900823933 /* videoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 044450FF1D658FC900823933 /* videoData.json */; };
 		044451041D6596F000823933 /* LZVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044451021D6596F000823933 /* LZVideoTableViewCell.m */; };
 		044451051D6596F000823933 /* LZVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044451031D6596F000823933 /* LZVideoTableViewCell.xib */; };
-		044451081D659F6500823933 /* LZPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044451071D659F6500823933 /* LZPlayerModel.m */; };
-		0444510B1D659F9600823933 /* LZPlayerResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 0444510A1D659F9600823933 /* LZPlayerResolution.m */; };
 		04488A511D61B16100AC9C72 /* LZLocalNotificationSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04488A501D61B16100AC9C72 /* LZLocalNotificationSingleton.m */; };
 		04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1CFC51D5479AA00D50AD8 /* FirstDetailViewController.m */; };
 		04E1CFC91D547BB700D50AD8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1CFC81D547BB700D50AD8 /* Icon.png */; };
@@ -47,6 +51,19 @@
 		040E9FDF1D54214400A3A3CB /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		040E9FE21D54360300A3A3CB /* FirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstModel.h; sourceTree = "<group>"; };
 		040E9FE31D54360300A3A3CB /* FirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstModel.m; sourceTree = "<group>"; };
+		0414BA691D8641E000FF51F1 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
+		0414BA6A1D8641E000FF51F1 /* LZAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAuthor.h; sourceTree = "<group>"; };
+		0414BA6B1D8641E000FF51F1 /* LZAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAuthor.m; sourceTree = "<group>"; };
+		0414BA6C1D8641E000FF51F1 /* LZBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseClass.h; sourceTree = "<group>"; };
+		0414BA6D1D8641E000FF51F1 /* LZBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseClass.m; sourceTree = "<group>"; };
+		0414BA6E1D8641E000FF51F1 /* LZConsumption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConsumption.h; sourceTree = "<group>"; };
+		0414BA6F1D8641E000FF51F1 /* LZConsumption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZConsumption.m; sourceTree = "<group>"; };
+		0414BA701D8641E000FF51F1 /* LZPlayInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPlayInfo.h; sourceTree = "<group>"; };
+		0414BA711D8641E000FF51F1 /* LZPlayInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPlayInfo.m; sourceTree = "<group>"; };
+		0414BA721D8641E000FF51F1 /* LZProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZProvider.h; sourceTree = "<group>"; };
+		0414BA731D8641E000FF51F1 /* LZProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZProvider.m; sourceTree = "<group>"; };
+		0414BA741D8641E000FF51F1 /* LZVideoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZVideoList.h; sourceTree = "<group>"; };
+		0414BA751D8641E000FF51F1 /* LZVideoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZVideoList.m; sourceTree = "<group>"; };
 		041A69641D82A168003FC55F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		043078C41D815BDD00089C2E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		043078C51D815BDD00089C2E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
@@ -59,10 +76,6 @@
 		044451011D6596F000823933 /* LZVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZVideoTableViewCell.h; sourceTree = "<group>"; };
 		044451021D6596F000823933 /* LZVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZVideoTableViewCell.m; sourceTree = "<group>"; };
 		044451031D6596F000823933 /* LZVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZVideoTableViewCell.xib; sourceTree = "<group>"; };
-		044451061D659F6500823933 /* LZPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPlayerModel.h; sourceTree = "<group>"; };
-		044451071D659F6500823933 /* LZPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPlayerModel.m; sourceTree = "<group>"; };
-		044451091D659F9600823933 /* LZPlayerResolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPlayerResolution.h; sourceTree = "<group>"; };
-		0444510A1D659F9600823933 /* LZPlayerResolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPlayerResolution.m; sourceTree = "<group>"; };
 		04488A4F1D61B16100AC9C72 /* LZLocalNotificationSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLocalNotificationSingleton.h; sourceTree = "<group>"; };
 		04488A501D61B16100AC9C72 /* LZLocalNotificationSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLocalNotificationSingleton.m; sourceTree = "<group>"; };
 		04E1CFC41D5479AA00D50AD8 /* FirstDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDetailViewController.h; sourceTree = "<group>"; };
@@ -111,6 +124,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0414BA681D8641E000FF51F1 /* VideoJsonModel */ = {
+			isa = PBXGroup;
+			children = (
+				0414BA691D8641E000FF51F1 /* DataModels.h */,
+				0414BA6A1D8641E000FF51F1 /* LZAuthor.h */,
+				0414BA6B1D8641E000FF51F1 /* LZAuthor.m */,
+				0414BA6C1D8641E000FF51F1 /* LZBaseClass.h */,
+				0414BA6D1D8641E000FF51F1 /* LZBaseClass.m */,
+				0414BA6E1D8641E000FF51F1 /* LZConsumption.h */,
+				0414BA6F1D8641E000FF51F1 /* LZConsumption.m */,
+				0414BA701D8641E000FF51F1 /* LZPlayInfo.h */,
+				0414BA711D8641E000FF51F1 /* LZPlayInfo.m */,
+				0414BA721D8641E000FF51F1 /* LZProvider.h */,
+				0414BA731D8641E000FF51F1 /* LZProvider.m */,
+				0414BA741D8641E000FF51F1 /* LZVideoList.h */,
+				0414BA751D8641E000FF51F1 /* LZVideoList.m */,
+			);
+			path = VideoJsonModel;
+			sourceTree = "<group>";
+		};
 		04E1CFC71D547BB700D50AD8 /* WEBICON */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,10 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				044450FF1D658FC900823933 /* videoData.json */,
-				044451061D659F6500823933 /* LZPlayerModel.h */,
-				044451071D659F6500823933 /* LZPlayerModel.m */,
-				044451091D659F9600823933 /* LZPlayerResolution.h */,
-				0444510A1D659F9600823933 /* LZPlayerResolution.m */,
+				0414BA681D8641E000FF51F1 /* VideoJsonModel */,
 			);
 			path = SecondedModel;
 			sourceTree = "<group>";
@@ -529,19 +559,23 @@
 				043078C61D815BDD00089C2E /* SecondViewController.m in Sources */,
 				04E2306C1D51E6D7005BD2FB /* FourthViewController.m in Sources */,
 				044451041D6596F000823933 /* LZVideoTableViewCell.m in Sources */,
-				0444510B1D659F9600823933 /* LZPlayerResolution.m in Sources */,
 				043906831D52D5C9004E942F /* LZNetworkSingleton.m in Sources */,
 				040E9FE01D54214400A3A3CB /* FirstTableViewCell.m in Sources */,
 				04488A511D61B16100AC9C72 /* LZLocalNotificationSingleton.m in Sources */,
+				0414BA7A1D8641E000FF51F1 /* LZProvider.m in Sources */,
 				04E70A701D5ABEE3007FCC0A /* Colours.m in Sources */,
+				0414BA791D8641E000FF51F1 /* LZPlayInfo.m in Sources */,
 				04E1CFC61D5479AA00D50AD8 /* FirstDetailViewController.m in Sources */,
 				04E2306F1D51E716005BD2FB /* AppDelegate.m in Sources */,
 				04E230721D51EA57005BD2FB /* LZTabBarControllerConfig.m in Sources */,
 				04E230691D51E6B8005BD2FB /* ThirdViewController.m in Sources */,
+				0414BA771D8641E000FF51F1 /* LZBaseClass.m in Sources */,
 				04E230541D51E35E005BD2FB /* FirstViewController.m in Sources */,
 				04380D641D58226E008C84CA /* CommonSingleton.m in Sources */,
-				044451081D659F6500823933 /* LZPlayerModel.m in Sources */,
+				0414BA781D8641E000FF51F1 /* LZConsumption.m in Sources */,
 				040E9FE41D54360300A3A3CB /* FirstModel.m in Sources */,
+				0414BA761D8641E000FF51F1 /* LZAuthor.m in Sources */,
+				0414BA7B1D8641E000FF51F1 /* LZVideoList.m in Sources */,
 				04E230281D51C2A7005BD2FB /* main.m in Sources */,
 				04E2307A1D51F79F005BD2FB /* LZPlusButtonSubclass.m in Sources */,
 			);

@@ -133,7 +133,7 @@
     // If your app need support UIDeviceOrientationLandscapeLeft or UIDeviceOrientationLandscapeRight，
     // remove the comment '//'
     // 如果你的App需要支持横竖屏，请使用该方法移除注释 '//'
-//     [self updateTabBarCustomizationWhenTabBarItemWidthDidUpdate];
+     [self updateTabBarCustomizationWhenTabBarItemWidthDidUpdate];
     
     // set the bar shadow image
     // This shadow image attribute is ignored if the tab bar does not also have a custom background image.So at least set somthing.
